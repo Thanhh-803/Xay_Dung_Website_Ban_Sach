@@ -1,0 +1,32 @@
+﻿@model Game.Model.Entities.DanhMucSanPham
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Thêm mới loại sản phẩm</h5>
+            <form action="/Administrator/DanhMucSanPham/Edit" method="post" class="row-col-md-6">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label">Mã danh mục</label>
+                    <input asp-for="Id" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label">Tên danh mục</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="MoTa" class="form-label">Mô tả</label>
+                    <input asp-for="MoTa" class="form-control" />
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,44 @@
+﻿@model List<Game.Model.Entities.Slide>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Danh mục sản phẩm</h5>
+            @*Nút thêm mới sản phẩm*@
+            <a href="/Administrator/Menu/Create" class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Mã slider</th>
+                        <th>Ảnh</th>
+                        <th>Mô tả</th>
+                        <th>Url</th>
+                        <th>Thứ tự hiển thị</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Image</td>
+                            <td>@item.Description</td>
+                            <td>@item.Url</td>
+                            <td>@item.DisplayOrder</td>
+                            <td>
+                                <a href="/Administrator/Slide/Edit/@item.Id" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-info-circle"></i></a>
+                                <a href="/Administrator/Slide/Delete/@item.Id" onclick="return confirm('Bạn có chắc là muốn xóa không?');" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

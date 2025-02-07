@@ -1,0 +1,51 @@
+﻿@model Game.Model.Entities.Page
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Thêm mới loại sản phẩm</h5>
+            <form action="/Administrator/Page/Edit" method="post" class="row-col-md-6">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label">Mã Page</label>
+                    <input asp-for="Id" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label">Tên Page</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Image" class="form-label">Ảnh</label>
+                    <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CreatedBy" class="form-label">Người tạo</label>
+                    <input asp-for="CreatedBy" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CreatedDate" class="form-label">Ngày tạo</label>
+                    <input asp-for="CreatedDate" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Content" class="form-label">Nội dung</label>
+                    <textarea name="Content" class="form-control"></textarea>
+                </div>
+                <script>
+                    CKEDITOR.replace('Content');
+                </script>
+                <div class="col-12">
+                    <label asp-for="Status" class="form-label">Trạng thái</label>
+                    <input asp-for="Status" class="form-control" />
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

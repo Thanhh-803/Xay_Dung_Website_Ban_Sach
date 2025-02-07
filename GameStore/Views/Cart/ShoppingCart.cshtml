@@ -1,0 +1,121 @@
+﻿@model Game.Model.Entities.SanPham
+@{
+    ViewData["Title"] = "ShoppingCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__links">
+                    <a href="./index.html"><i class="fa fa-home"></i> Trang chủ</a>
+                    <span>Shopping cart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Shop Cart Section Begin -->
+<section class="shop-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shop__cart__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        @{
+                            double tongTien = 0;
+                            List<CartItem>
+                            cart = (List<CartItem>)Context.Session.Get<List<CartItem>>("Cart");
+                        }
+                        <tbody>
+                            @if (cart != null)
+                            {
+                                foreach (var item in cart)
+                                {
+                                    <tr>
+                                        <td class="cart__product__item">
+                                            <img style="width:100px; height:100px;" src="~/img/shop-cart/@item.DonHangSanPham.Image" alt="">
+                                            <div class="cart__product__item__title">
+                                                <h6>@item.DonHangSanPham.Name</h6>
+                                                <div class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="cart__price">@item.DonHangSanPham.Discount</td>
+                                        <td class="cart__quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="@item.SoLuong">
+                                            </div>
+                                        </td>
+                                        <td class="cart__total">
+                                            @{
+                                                double tong = (double)item.DonHangSanPham.Discount * item.SoLuong;
+                                                tongTien += tong;
+                                            }
+                                            @tong
+                                        </td>
+                                        <td class="cart__close"><span class="icon_close"></span></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="cart__btn">
+                    <a href="/SanPham/Index">Continue Shopping</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="cart__btn update__btn">
+                    <a href="/Cart/ShoppingCart"><span class="icon_loading"></span> Update cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 offset-lg-2">
+                <div class="cart__total__procced ">
+                    <h6 class="text-center">Thành tiền</h6>
+                    <ul>
+                        <li>
+                            Tổng 
+                            @foreach (var item in cart)
+                            {
+                                <span>
+                                    @{
+                                        double tong = (double)item.DonHangSanPham.Discount * item.SoLuong ;
+                                        tongTien += tong;
+                                    }
+                                    @tong
+                                </span>
+                            }
+                        </li>
+                    </ul>
+                    <a href="/Cart/Checkout" class="primary-btn">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shop Cart Section End -->

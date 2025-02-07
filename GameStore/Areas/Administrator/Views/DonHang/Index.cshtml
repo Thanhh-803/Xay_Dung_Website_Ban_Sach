@@ -1,0 +1,46 @@
+﻿@model List<Game.Model.Entities.DonHang>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Chi tiết sản phẩm</h5>
+            @*Nút thêm mới sản phẩm*@
+            <a href="/Administrator/DonHang/Create" class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Mã đơn hàng </th>
+                        <th>Mã sản phẩm </th>
+                        <th>Mã khách hàng </th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Giá</th>
+                        <th>Giá tổng </th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.ProductId</td>
+                            <th>@item.CustomeId</th>
+                            <th>@item.OrderDate</th>
+                            <td>@item.Price</td>
+                            <td>@item.TotalCost</td>
+                            <td>
+                                <a href="/Administrator/DonHang/Edit/@item.Id" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-info-circle"></i></a>
+                                <a href="/Administrator/DonHang/Delete/@item.Id" onclick="return confirm('Bạn có chắc là muốn xóa không?');" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

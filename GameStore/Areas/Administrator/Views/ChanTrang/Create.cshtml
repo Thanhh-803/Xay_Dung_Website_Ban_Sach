@@ -1,0 +1,32 @@
+﻿@model Game.Model.Entities.ChanTrang
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Thêm mới loại sản phẩm</h5>
+            <form action="/Administrator/ChanTrang/Create" method="post" class="row-col-md-6">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label">Mã chân trang</label>
+                    <input asp-for="Id" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label">Tên chân trang</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Content" class="form-label">Nội dung</label>
+                    <input asp-for="Content" class="form-control" />
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

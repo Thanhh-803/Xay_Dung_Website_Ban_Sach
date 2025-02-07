@@ -1,0 +1,14 @@
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\bin\Debug\net6.0\Game.Model.deps.json
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\bin\Debug\net6.0\Game.Model.runtimeconfig.json
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\bin\Debug\net6.0\Game.Model.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\bin\Debug\net6.0\Game.Model.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.csproj.AssemblyReference.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.AssemblyInfoInputs.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.AssemblyInfo.cs
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\refint\Game.Model.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\Game.Model.genruntimeconfig.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Model\obj\Debug\net6.0\ref\Game.Model.dll

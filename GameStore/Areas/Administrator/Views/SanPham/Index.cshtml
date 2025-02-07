@@ -1,0 +1,50 @@
+﻿@model List<Game.Model.Entities.SanPham>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Sản phẩm</h5>
+            @*Nút thêm mới sản phẩm*@
+            <a href="/Administrator/SanPham/Create" class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm </th>
+                        <th>Tên sản phẩm </th>
+                        <th>Ảnh </th>
+                        <th>Giá</th>
+                        <th>Giá giảm</th>
+                        <th>Khuyến mãi</th>
+                        <th>Mô tả</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>
+                                <img style="width:50px; height=50px; " src="~/img/@item.Image" alt="product">
+                            </td>
+                            <td>@item.Price</td>
+                            <td>@item.Discount</td>
+                            <td>@item.Promotion</td>
+                            <td>@item.Descriptions</td>
+                            <td>
+                                <a href="/Administrator/SanPham/Edit/@item.Id" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-info-circle"></i></a>
+                                <a href="/Administrator/SanPham/Delete/@item.Id" onclick="return confirm('Bạn có chắc là muốn xóa không?');" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

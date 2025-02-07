@@ -1,0 +1,40 @@
+﻿@model List<Game.Model.Entities.Users>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Tài khoản</h5>
+            @*Nút thêm mới sản phẩm*@
+            @*<a href="/Administrator/SanPham/Create" class="btn btn-primary mb-2">Thêm mới</a>*@
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Tên tài khoản</th>
+                        <th>Số điện thoại </th>
+                        <th>Email </th>
+                        <th>Ngày sinh</th>
+                        <th>Mật khẩu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Username</td>
+                            <td>@item.Id</td>
+                            <td>@item.Email</td>
+                            <td>@item.Age</td>
+                            <td>@item.Password</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

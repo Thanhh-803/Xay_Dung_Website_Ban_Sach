@@ -1,0 +1,162 @@
+﻿@model Game.Model.Entities.SanPham
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__links">
+                    <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                    <span>Shopping cart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Checkout Section Begin -->
+<section class="checkout spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h6 class="coupon__link">
+                    <span class="icon_tag_alt"></span> <a href="#">Have a coupon?</a> Click
+                    here to enter your code.
+                </h6>
+            </div>
+        </div>
+        <form action="#" class="checkout__form">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h5>Billing detail</h5>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="checkout__form__input">
+                                <p>Họ tên <span>*</span></p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="checkout__form__input">
+                                <p>Country <span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="checkout__form__input">
+                                <p>Address <span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="checkout__form__input">
+                                <p>Town/City <span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="checkout__form__input">
+                                <p>Country/State <span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="checkout__form__input">
+                                <p>Postcode/Zip <span>*</span></p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="checkout__form__input">
+                                <p>Phone <span>*</span></p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="checkout__form__input">
+                                <p>Email <span>*</span></p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="checkout__form__checkbox">
+                                <label for="note">
+                                    Note about your order, e.g, special noe for delivery
+                                    <input type="checkbox" id="note">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="checkout__form__input">
+                                <p>Oder notes <span>*</span></p>
+                                <input type="text"
+                                       placeholder="Note about your order, e.g, special noe for delivery">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="checkout__order">
+                        <h5>Đơn hàng của bạn</h5>
+                        @{
+                            double tongTien = 0;
+                            List<CartItem>
+                            cart = (List<CartItem>)Context.Session.Get<List<CartItem>>("Cart");
+                        }
+                        @if(cart != null)
+                        {
+                            @foreach (var item in cart)
+                            {
+                                <div class="checkout__order__product">
+
+                                    <ul>
+                                        <li>
+                                            <span class="top__text">Sản phẩm</span>
+                                            <span class="top__text__center">Giá</span>
+                                            <span class="top__text__right"></span>
+                                        </li>
+                                        <li>
+                                            @item.DonHangSanPham.Name
+                                            <span>   x @item.SoLuong</span>
+                                            <span>@item.DonHangSanPham.Discount</span>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                        }
+                    
+                                <div class="checkout__order__total">
+                                    <ul>
+                                <li>
+                                    Tổng
+                                    @if (cart != null)
+                                {
+                                    foreach (var item in cart)
+                                    {
+                                            <span>
+                                                @{
+                                                    double tong = (double)item.DonHangSanPham.Discount * item.SoLuong;
+                                                    tongTien += tong;
+                                                }
+                                                @tong
+                                            </span>
+                                        
+                                    }
+                                }
+                                        </li>
+                                    </ul>
+                                </div>
+                        <div class="checkout__order__widget">
+                            <label for="o-acc">
+                                Thanh toán khi nhận hàng
+                                <input type="checkbox" id="o-acc">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <a href="/Cart/EndCheckout" class="site-btn" style="text-align:center">Đặt hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Checkout Section End -->
+

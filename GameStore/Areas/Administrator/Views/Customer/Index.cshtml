@@ -1,0 +1,46 @@
+﻿@model List<Game.Model.Entities.Customer>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Danh mục khách hàng</h5>
+            @*Nút thêm mới sản phẩm*@
+            <a href="/Administrator/Customer/Create" class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Mã khách hàng </th>
+                        <th>Tên khách hàng</th>
+                        <th>Địa chỉ </th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Lời nhắn của khách hàng</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Address</td>
+                            <td>@item.Email</td>
+                            <td>@item.Mobile</td>
+                            <td>@item.Note</td>
+                            <td>
+                                <a href="/Administrator/Customer/Create/@item.Id" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-info-circle"></i></a>
+                                <a href="/Administrator/Customer/Delete/@item.Id" onclick="return confirm('Bạn có chắc là muốn xóa không?');" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

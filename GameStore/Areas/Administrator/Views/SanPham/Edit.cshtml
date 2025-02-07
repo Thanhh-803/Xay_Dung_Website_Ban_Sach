@@ -1,0 +1,65 @@
+﻿@model Game.Model.Entities.SanPham
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Sửa sản phẩm</h5>
+            <form asp-action="Edit" asp-controller="SanPham" method="post" class="row-col-md-6">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label">Mã sản phẩm</label>
+                    <input asp-for="Id" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label">Tên sản phẩm</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CategoryId" class="form-label">Mã danh mục</label>
+                    <input asp-for="CategoryId" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Image" class="form-label">Ảnh</label>
+                    <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="ImageMore" class="form-label">Ảnh khác</label>
+                    <input type="file" asp-for="ImageMore" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Price" class="form-label">Giá</label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Discount" class="form-label">Giá giảm</label>
+                    <input asp-for="Discount" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Promotion" class="form-label">Khuyến mãi</label>
+                    <input asp-for="Promotion" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Descriptions" class="form-label">Mô tả</label>
+                    <input asp-for="Descriptions" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="MoTaCh" class="form-label">Mô tả cấu hình</label>
+                    <input asp-for="MoTaCh" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Status" class="form-label">Trạng thái</label>
+                    <input asp-for="Status" class="form-control" />
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

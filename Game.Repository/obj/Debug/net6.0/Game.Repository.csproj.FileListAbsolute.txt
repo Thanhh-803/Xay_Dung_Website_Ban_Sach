@@ -1,0 +1,17 @@
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.Repository.deps.json
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.Repository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.Repository.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.csproj.AssemblyReference.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.AssemblyInfoInputs.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.AssemblyInfo.cs
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\refint\Game.Repository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\ref\Game.Repository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.IRepository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.Model.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.IRepository.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\bin\Debug\net6.0\Game.Model.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.Repository\obj\Debug\net6.0\Game.Repository.csproj.CopyComplete

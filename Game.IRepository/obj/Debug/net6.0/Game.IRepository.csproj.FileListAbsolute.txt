@@ -1,0 +1,12 @@
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\bin\Debug\net6.0\Game.IRepository.deps.json
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\bin\Debug\net6.0\Game.IRepository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\bin\Debug\net6.0\Game.IRepository.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.csproj.AssemblyReference.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.AssemblyInfoInputs.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.AssemblyInfo.cs
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\refint\Game.IRepository.dll
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\Game.IRepository.pdb
+D:\TTCNTT4\Asp.NET core\DUANLON\Game.IRepository\obj\Debug\net6.0\ref\Game.IRepository.dll

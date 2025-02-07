@@ -1,0 +1,51 @@
+﻿@model Game.Model.Entities.Users
+
+@{
+    ViewData["Title"] = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<hr />
+<div class="container" >
+    <h4>Đăng ký ở đây</h4>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <form asp-action="DangKy">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Id" class="control-label">Nhập số điện thoại</label>
+                    <input asp-for="Id" class="form-control w-100" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">Nhập Email</label>
+                    <input asp-for="Email" class="form-control w-100" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Username" class="control-label">Nhập Tên Đăng nhập</label>
+                    <input asp-for="Username" class="form-control w-100" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label">Nhập Tuổi</label>
+                    <input asp-for="Age" class="form-control w-100" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label">Nhập Mật khẩu</label>
+                    <input asp-for="Password" class="form-control w-100" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Đăng ký" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
